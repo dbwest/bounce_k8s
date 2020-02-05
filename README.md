@@ -10,9 +10,15 @@ An ansible playbook to do a rolling drain, reboot, and uncordon of any number of
 
 ## caveats ##
 - for the drain of each node this uses `--delete-local-data`. You must be cool with this. No warranty.
-- the run script uses $USER to determine the ansible_user. If your user cannot log into all nodes with sudo you are on your own.
+- the `run.sh` script uses $USER to determine the ansible_user. If your user cannot log into all nodes with sudo you are on your own.
 
 ## quick start ##
+All from the repo base dir...
+
+Prep scripts:
+
+`sudo chmod +x {populate_hosts.sh,run.sh}`
+
 Prepare your hosts:
 
 `./populate_hosts.sh`
